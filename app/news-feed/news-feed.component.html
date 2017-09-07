@@ -1,0 +1,45 @@
+<!-- <ul class="papers" *ngIf="cookieExists">
+  {{cookieValue}}
+
+  <li *ngFor="let value of cookieValue"> 
+      {{value.name}}
+      {{value.string}}
+  </li>
+</ul> -->
+
+<nav *ngIf="cookieExists">
+<ul class="papers">
+  <li *ngFor="let paper of cookieValue" [class.selected]="paper === selectedPaper"> 
+    <button (click)="onSelect(paper);getNews(paper.string);">
+      {{paper.name}}
+    </button>
+  </li>
+</ul>
+</nav>
+
+<nav *ngIf="!cookieExists">
+<ul class="papers">
+  <li *ngFor="let paper of papers" [class.selected]="paper === selectedPaper"> 
+    <button (click)="onSelect(paper);getNews(paper.string);">
+      {{paper.name}}
+    </button>
+  </li>
+</ul>
+</nav>
+<div class="row">
+  <ul class="news-feed">
+    <li *ngFor="let article of news">
+      <a href="{{article.url}}" target="_bank">
+        <div class="image" [ngStyle]="{'background-image': 'url(' + article.urlToImage + ')'}"></div>
+      	<h2 [innerHTML]="article.title"></h2>
+  	    <!-- <p>{{article.publishedAt}}</p> -->
+  	    <div class="description">
+          <p [innerHTML]="article.description | truncate : 100"></p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>newsstack</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' type='text/css' href='./app/iconify-css/_icons.svg.css' />
+  <link rel='stylesheet' type='text/css' href='./app/styles.min.css' />
+  
+
+  <!-- Polyfills -->
+  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+  <!-- Update these package versions as needed -->
+  <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+  <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+  <!-- This SystemJS configuration loads umd packages from the web -->
+
+
+
+
+  <!-- Polyfill(s) for older browsers -->
+
+  <!--<script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>-->
+
+  <!-- This SystemJS configuration loads umd packages from the web -->
+  <script src="systemjs.config.server.js"></script>
+
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+</head>
+
+<body>
+<news-app>
+<style>
+  /*http://tobiasahlin.com/spinkit/*/
+  body {
+    background-color: #27546f;
+  }
+  .wrap {
+    margin: 150px auto;
+  }
+  .spinner {
+    margin: 0 auto 10px auto;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+  .icon {
+    height: 50px;
+    width: 175px;
+    margin: 50px auto 0 auto;
+    background-size: 100%;
+    display: block;
+    text-indent: -9999px;
+  }
+
+  @-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+</style>
+<div class="wrap">
+  <div class="spinner"></div>
+  <div class="icon icon-logo">newsstack logo</div>
+</div>
+
+</news-app>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<h1>Pick your stack</h1>
+<p>Pick up to 8 news services to save to cookies.</p>
+<form (ngSubmit)="saveStack()">
+  <ul>
+    <li *ngFor="let option of options; let i = index">
+      <input type="checkbox" id="cb{{i}}" name="{{option.name}}" (change)="updateChecked(option, i)">
+      <label for="cb{{i}}"><img src="../app/images/{{option.string}}.png"></label>
+
+    </li>
+  </ul>
+  <button type="submit">Submit</button>
+</form>
+
+
+<!-- <ul>
+  	<li>
+		<input type="checkbox" id="cb1" name="abc-news-au"/>
+    	<label for="cb1"><img src="http://lorempixel.com/100/100" /></label>
+  	</li>
+  	<li>
+  		<input type="checkbox" id="cb2"  name="abc-news-au"/>
+    	<label for="cb2"><img src="http://lorempixel.com/101/101" /></label>
+  	</li>
+  	<li>
+  		<input type="checkbox" id="cb3"  name="abc-news-au"/>
+    	<label for="cb3"><img src="http://lorempixel.com/102/102" /></label>
+  	</li>
+  	<li>
+  		<input type="checkbox" id="cb4"  name="abc-news-au"/>
+    	<label for="cb4"><img src="http://lorempixel.com/103/103" /></label>
+  	</li>
+</ul> -->
+
+
+
+
+<a routerLink="/">back</a>
