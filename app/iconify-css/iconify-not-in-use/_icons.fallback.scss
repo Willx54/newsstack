@@ -1,6 +1,10 @@
 .icon {
 	background-repeat: no-repeat;
 
+	&.icon-fab {
+		background-image: url('..\images\svgs\png\fab.png');
+	}
+
 	&.icon-logo {
 		background-image: url('..\images\svgs\png\logo.png');
 	}

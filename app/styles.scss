@@ -3,13 +3,23 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: Georgia, Times, serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 }
 
 h1 {
 	font-size: 24px;
 	font-weight: normal;
+	font-family: Georgia, Times, serif;
+}
+
+h2 {
+	font-family: Georgia, Times, serif;	
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .container {
@@ -24,7 +34,7 @@ h1 {
 	clear: both;
 }
 
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+.col, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     	position: relative;
     	min-height: 1px;
     	padding-right: 15px;
@@ -63,24 +73,53 @@ footer {
 	a {
 		color: #fff;
 		text-decoration: none;
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 	a:hover {
 		text-decoration: underline;
 	}
 	.att-link {
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		position: absolute;
 		left: 20px;
 		bottom: 20px;
 	}
 	.contact {
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		position: absolute;
 		right: 20px;
 		bottom: 20px;
 	}
 }
+
+.fab,
+.fab-dt {
+	position: fixed;
+	left: 50%;
+	bottom: 15px;
+	margin-left: -28px;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-color: $quaternery-color;
+    background-position: center center;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-indent: -9999px;
+    transition: all 0.2s ease;
+    &:hover, &:focus {
+  		box-shadow: 0 0 4px rgba(0,0,0,.14),
+    	0 4px 8px rgba(0,0,0,.28);
+	}
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.fab.hidden,
+.fab-dt.hidden {
+	display: none;
+}
+
+
 
 /* forms - pinched from bootstrap */
 .ng-valid[required], .ng-valid.required  {
@@ -97,7 +136,6 @@ label {
     margin-bottom: 3px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .form-group {
@@ -137,6 +175,27 @@ label {
 }
 
 /* end of forms */
+
+@media only screen and (min-width : 700px) {
+
+	header .container {
+		position: relative;
+		overflow: visible;
+	}
+
+	.fab {
+		display: none;
+	}
+
+	.fab-dt {
+		position: absolute;	
+		right: 30px;
+		top: 49px;
+		left: auto;
+		bottom: auto;
+		margin-left: 0;
+	}
+}
 
 @media only screen and (min-width : 750px) {
 	.container {

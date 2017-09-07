@@ -5,6 +5,7 @@ import {NewsFeedComponent}  from 'app/news-feed/news-feed.component';
 import {TruncatePipe} from 'app/truncate';
 import {ContactComponent}  from 'app/contact/contact.component';
 import {MyStackComponent}  from 'app/my-stack/my-stack.component';
+// import {RouterModule, Routes} from '@angular/router';
 
 @Component({
   selector: 'news-app',
@@ -15,6 +16,7 @@ import {MyStackComponent}  from 'app/my-stack/my-stack.component';
       <a routerLink="/">
         <h1 class="icon icon-logo">newsstack logo</h1>
       </a>
+      <a [routerLinkActive]="['hidden']" class="my-stack fab-dt icon icon-fab" routerLink="/my stack">my stack</a>
     </div>
   </header>
   <div class="container">
@@ -24,13 +26,16 @@ import {MyStackComponent}  from 'app/my-stack/my-stack.component';
     <div class="container">
       <div class="att-link">powered by <a href="https://newsapi.org/" target="_blank">newsapi.org</a></div>
       <a class="contact" routerLink="/contact">contact</a>
-      <a class="my-stack" routerLink="/my stack">my stack</a>
     </div>
   </footer>
+  <a [routerLinkActive]="['hidden']" class="my-stack fab icon icon-fab" routerLink="/my stack">my stack</a>
   `,
   styleUrls: ['app/app.component.min.css']
 })
 export class AppComponent {
   constructor() {}
+  
 }
+
+
 
