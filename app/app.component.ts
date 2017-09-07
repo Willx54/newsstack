@@ -18,7 +18,6 @@ import {MyStackComponent}  from 'app/my-stack/my-stack.component';
     </div>
   </header>
   <div class="container">
-  test
       <router-outlet></router-outlet>
   </div>
   <footer>
