@@ -11,7 +11,7 @@ import {MyStackComponent}  from 'app/my-stack/my-stack.component';
 import {PageNotFoundComponent}  from './not-found/not-found.component';
 import {TruncatePipe}  from 'app/truncate';
 import {RouterModule, Routes} from '@angular/router';
-import { CookieService } from 'app/cookie.service';
+import {CookieService} from 'app/cookie.service';
 
 const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },

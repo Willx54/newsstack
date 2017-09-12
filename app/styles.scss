@@ -105,6 +105,11 @@ footer {
     color: #fff;
     text-indent: -9999px;
     transition: all 0.2s ease;
+
+	/* for testing purposes */
+	display: none; 
+	/* end */
+    
     &:hover, &:focus {
   		box-shadow: 0 0 4px rgba(0,0,0,.14),
     	0 4px 8px rgba(0,0,0,.28);

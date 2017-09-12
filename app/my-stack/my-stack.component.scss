@@ -5,12 +5,13 @@ h2 {
 }
 
 ul {
+	margin: 20px 0 30px 0;
 	list-style-type: none;
-	text-align: center;
 }
 
 li {
 	display: inline-block;
+	width: 33.333%;
 }
 
 input[type="checkbox"][id^="cb"] {
@@ -25,7 +26,7 @@ label {
 	position: relative;
 	margin: 7.5px;
 	cursor: pointer;
-	background-color: #becbd3;
+	background-color: #fff;
 }
 
 label:before {
@@ -48,8 +49,7 @@ label:before {
 }
 
 label img {
-	height: 100px;
-	width: 100px;
+	width: 100%;
 	display: block;
 	transition-duration: 0.2s;
 	transform-origin: 50% 50%;
@@ -57,6 +57,8 @@ label img {
 
 :checked + label {
 	/*border-color: #becbd3;*/
+	/*background-color: #becbd3;*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 :checked + label:before {
@@ -69,4 +71,70 @@ label img {
 	transform: scale(0.9);
 /*	box-shadow: 0 0 5px #333;*/
 	z-index: -1;
+}
+
+/* button styling should be in main stylesheet */
+button,
+a.back-btn {
+	font-size: 14px;
+	background-color: #27546f;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: 0;
+    text-transform: lowercase;
+    transition: ease 0.5s opacity;
+    &:hover {
+    	opacity: 0.7;
+    }
+}
+
+button {
+	margin-right: 5px;
+}
+
+a.back-btn {
+	text-decoration: none;
+	display: inline-block;
+}
+
+@media only screen and (min-width : 430px) {
+	li {
+		width: 25%;
+	}
+}
+
+@media only screen and (min-width : 560px) {
+	li {
+		width: 20%;
+	}
+}
+
+@media only screen and (min-width : 750px) {
+	li {
+		width: 16.66667%;
+	}
+}
+
+@media only screen and (min-width : 980px) {
+	li {
+		width: 14.28571%;
+	}
+}
+
+@media only screen and (min-width : 1140px) {
+	li {
+		width: 12.5%;
+	}
+}
+
+@media only screen and (min-width : 1300px) {
+	li {
+		width: 11.11111%;
+	}
 }
